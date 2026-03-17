@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eid For Usama 🤍</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* BODY & BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(160deg, #ffe6f0, #fff0e6, #e8e0f7); /* visible romantic gradient */
+  color: #5c4740; /* soft romantic brown */
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Radial glow overlay for extra dreamy effect */
+body::before {
+  content: "";
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: radial-gradient(circle at 50% 30%, rgba(255,240,245,0.3), transparent 70%);
+  pointer-events:none;
+}
+
+/* floating petals */
+.petal {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(3px) drop-shadow(0 0 4px rgba(255,200,220,0.4));
+  animation: floatPetal linear infinite;
+}
+
+@keyframes floatPetal {
+  0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity:0.6; }
+  50% { transform: translateY(-120px) rotate(180deg) scale(1); opacity:1; }
+  100% { transform: translateY(-250px) rotate(360deg) scale(0.8); opacity:0; }
+}
+
+/* tiny sparkles */
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(1px);
+  animation: floatSparkle linear infinite;
+}
+
+@keyframes floatSparkle {
+  0% { transform: translateY(0) scale(0.8); opacity:0.5; }
+  50% { transform: translateY(-80px) scale(1); opacity:0.9; }
+  100% { transform: translateY(-160px) scale(0.8); opacity:0; }
+}
+
+/* section containers */
+.section {
+  display: none;
+  padding: 70px 20px;
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.6s ease;
+}
+
+.active {
+  display: block;
+  animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+  from {opacity:0; transform: translateY(25px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* headings */
+h1 { font-weight: 400; letter-spacing: 1px; color: #5c3b4d; margin-bottom: 10px; }
+h2 { font-weight: 400; color: #6d4c41; margin-bottom: 10px; }
+
+/* paragraph */
+p { font-size: 17px; line-height: 1.9; color: #5c4740; }
+
+/* divider line */
+.divider { width: 50px; height: 2px; background: #d8c7c0; margin: 20px auto; }
+
+/* button */
+button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: 1px solid #d8c7c0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(5px);
+  color: #7b5c54;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+button:hover { background: #f8f2ef; transform: translateY(-2px); }
+
+/* images */
+img {
+  width: 100%;
+  border-radius: 18px;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.4s;
+}
+img:hover { transform: scale(1.03); }
+
+/* final text */
+.final-text { font-size: 20px; margin-top: 30px; color: #5c3b4d; }
+</style>
+</head>
+<body>
+
+<script>
+/* floating petals */
+function createPetals(){
+  const colors=['#FFC1CC','#FFD1B3','#FFE4E1','#FFF0F5','#EED2FF']; // pastel romantic palette
+  for(let i=0;i<12;i++){
+    let petal=document.createElement('div');
+    petal.className='petal';
+    petal.style.background=colors[Math.floor(Math.random()*colors.length)];
+    petal.style.left=Math.random()*100+'vw';
+    petal.style.width=8+Math.random()*10+'px';
+    petal.style.height=8+Math.random()*10+'px';
+    petal.style.animationDuration=(5+Math.random()*5)+'s';
+    document.body.appendChild(petal);
+    setTimeout(()=>petal.remove(),7000);
+  }
+}
+setInterval(createPetals,800);
+
+/* tiny sparkles */
+function createSparkles(){
+  const colors=['#fff9e6','#fff1cc','#fff7dd']; // soft cream/gold
+  for(let i=0;i<15;i++){
+    let sparkle=document.createElement('div');
+    sparkle.className='sparkle';
+    sparkle.style.background=colors[Math.floor(Math.random()*colors.length)];
+    sparkle.style.left=Math.random()*100+'vw';
+    sparkle.style.width=2+Math.random()*3+'px';
+    sparkle.style.height=2+Math.random()*3+'px';
+    sparkle.style.animationDuration=(4+Math.random()*4)+'s';
+    document.body.appendChild(sparkle);
+    setTimeout(()=>sparkle.remove(),7000);
+  }
+}
+setInterval(createSparkles,500);
+</script>
+
+<div id="intro" class="section active">
+  <h1>🌙 Eid Mubarak, Usama</h1>
+  <div class="divider"></div>
+  <p>I made something special just for you 🤍</p>
+  <button onclick="next('letter')">Open</button>
+</div>
+
+<div id="letter" class="section">
+  <div class="divider"></div>
+  <p>
+    My love 🤍<br><br>
+    Eid Mubarak ❤️<br><br>
+    Ap meri zindagi ka sabse khoobsurat hissa ho…  
+    aur Apke saath har lamha special lagta hai ✨<br><br>
+    Ap sirf meri aadat nahi… meri zarurat ho... Ap tou meri jaan ho 💖<br><br>
+    I Love You Bacha ❤️...<br><br>
+    Mera Chota Para Bacha 😘.
+  </p>
+  <button onclick="next('gallery')">Next</button>
+</div>
+
+<div id="gallery" class="section">
+  <h2>Our Moments 📸</h2>
+  <div class="divider"></div>
+  <img src="img/eye contact.jpeg">
+  <img src="img/pink blue.jpeg">
+  <img src="img/selfie.jpeg">
+  <button onclick="next('final')">Continue</button>
+</div>
+
+<div id="final" class="section">
+  <div class="divider"></div>
+  <p class="final-text">
+    I don’t just want this Eid…  
+    I want every moment with you 🤍<br><br>
+    Will you stay with me forever? 💍
+  </p>
+</div>
+
+<script>
+function next(id){
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
